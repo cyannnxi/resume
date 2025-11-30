@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陳宥安 | Microsoft MiFriend 申請履歷</title>
+    <style>
+        :root {
+            --primary-color: #2f2f2f;
+            --microsoft-blue: #00a4ef;
+            --bg-color: #fdfdfd;
+            --text-color: #333;
+            --card-bg: #fff;
+        }
+
+        body {
+            font-family: "Segoe UI", "微軟正黑體", sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            border-top: 6px solid var(--microsoft-blue);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .tagline {
+            display: inline-block;
+            background: rgba(0, 164, 239, 0.1);
+            color: var(--microsoft-blue);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border: 1px solid #eee;
+        }
+
+        h2 {
+            color: var(--microsoft-blue);
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .education-item { margin-bottom: 15px; }
+        .edu-school { font-size: 1.2rem; font-weight: bold; color: var(--primary-color); }
+        .edu-dept { color: var(--microsoft-blue); font-weight: 600; }
+        .edu-desc { font-size: 0.95rem; color: #666; margin-top: 5px; }
+
+        .exp-item {
+            margin-bottom: 30px;
+            padding-left: 15px;
+            border-left: 3px solid var(--microsoft-blue);
+        }
+        .exp-item:last-child { margin-bottom: 0; }
+        .exp-title { font-size: 1.2rem; font-weight: bold; margin: 0; color: var(--primary-color); }
+        .exp-role { color: #555; font-weight: 600; font-size: 1rem; }
+        .exp-desc { margin-top: 10px; font-size: 0.95rem; color: #444; }
+
+        /* 列表樣式 (用於詳細經歷與競賽) */
+        .exp-list {
+            margin-top: 5px;
+            padding-left: 20px;
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 15px; 
+        }
+        .exp-list li {
+            margin-bottom: 3px;
+        }
+        
+        /* 經歷分類小標題 */
+        .exp-subtitle {
+            font-weight: bold;
+            color: #2f2f2f;
+            margin-top: 12px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+        }
+        .exp-subtitle::before {
+            content: "•";
+            color: var(--microsoft-blue);
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        /* 作品集卡片樣式 */
+        .playlist-card {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #00a4ef 0%, #0078d4 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .playlist-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 120, 212, 0.3);
+        }
+
+        .playlist-icon {
+            font-size: 3rem;
+            margin-right: 20px;
+        }
+
+        .playlist-info h3 { margin: 0; font-size: 1.3rem; color: white; }
+        .playlist-info p { margin: 5px 0 0 0; opacity: 0.9; font-size: 0.95rem; }
+
+        .btn-view {
+            margin-left: auto;
+            background: white;
+            color: var(--microsoft-blue);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            white-space: nowrap; /* 防止文字換行 */
+        }
+
+        .contact-section { text-align: center; margin-top: 40px; margin-bottom: 40px; }
+        .btn-contact {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .btn-contact:hover { background-color: #000; }
+
+        @media (max-width: 600px) {
+            .playlist-card { flex-direction: column; text-align: center; }
+            .playlist-icon { margin-right: 0; margin-bottom: 10px; }
+            .btn-view { margin: 15px auto 0 auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>陳宥安 You-An Chen</h1>
+        <p>中興大學 應用經濟學系</p>
+        <div class="tagline">將想法轉化為成果的企劃執行者</div>
+    </header>
+
+    <div class="container">
+        
+        <section>
+            <h2>關於我 About Me</h2>
+            <p>我是陳宥安，目前就讀於<strong>中興大學應用經濟學系</strong>，一個習慣以邏輯思考問題、卻喜歡用影像說故事的人。</p>
+            <p>在經濟學的訓練中，我培養了資料分析、邏輯推論與拆解問題的能力；而在系學會與社團經驗中，我則磨練了影像拍攝、剪輯與社群內容經營的實務力。這讓我逐步建立起<strong>「理性與創意並行」</strong>的工作風格，能將抽象想法轉化為具體成果。</p>
+            <p>我期待結合分析思維與內容創作，透過文字、影像與專案，創造能被理解、也能產生影響力的溝通方式，並成為品牌與校園之間能有效連結、傳遞價值的橋樑。</p>
+        </section>
+
+        <section>
+            <h2>學歷 Education</h2>
+            <div class="education-item">
+                <div class="edu-school">國立中興大學 (NCHU)</div>
+                <div class="edu-dept">應用經濟學系 | 學士 (2024 - 至今)</div>
+                <div class="edu-desc">專注於數據分析與經濟模型，培養市場趨勢的敏銳洞察力。</div>
+            </div>
+            <div class="education-item" style="margin-top: 20px; opacity: 0.8;">
+                <div class="edu-school" style="font-size: 1rem;">長庚大學</div>
+                <div class="edu-dept" style="font-size: 0.9rem;">數位金融科技學系 (2023 - 2024)</div>
+                <div class="edu-desc">大一時期接觸金融科技基礎，後透過轉學考調整職涯與學習方向。</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>社團與領導經歷 Experience</h2>
+            
+            <div class="exp-item">
+                <div class="exp-title">數位金融科技學系系學會</div>
+                <div class="exp-role">創辦人 & 副會長</div>
+                
+                <div class="exp-subtitle">組織創建與制度建立</div>
+                <ul class="exp-list">
+                    <li>系統性規劃系學會組織架構、職責分工與內部運作制度，從零創建可長期運作的學生組織。</li>
+                    <li>制定完整的招募與交接流程，確保組織傳承並降低人員更替帶來的風險。</li>
+                </ul>
+
+                <div class="exp-subtitle">專案規劃與活動統籌</div>
+                <ul class="exp-list">
+                    <li>規劃多項面向學生的系上活動，包含新生活動、學習分享與系上交流，提升系上凝聚力。</li>
+                    <li>主導活動時程安排、工作分配與現場執行，確保專案能如期完成。</li>
+                </ul>
+
+                <div class="exp-subtitle">跨單位協調與資源整合</div>
+                <ul class="exp-list">
+                    <li>擔任學生、教師與行政之間的溝通窗口，協調各方需求與時程。</li>
+                    <li>整合校內資源，為活動爭取場地、宣傳與行政支援。</li>
+                </ul>
+
+                <div class="exp-subtitle">領導與決策能力</div>
+                <ul class="exp-list">
+                    <li>在人力與經驗有限的情況下，帶領團隊快速學習與成長。</li>
+                    <li>面對突發狀況能即時調整企劃與溝通方式，確保專案穩定推進。</li>
+                </ul>
+
+                <div class="exp-subtitle">組織文化與團隊建立</div>
+                <ul class="exp-list" style="margin-bottom: 0;">
+                    <li>協助新成員熟悉工作內容，建立正向溝通與合作文化。</li>
+                    <li>提升團隊向心力與執行效率，使組織能自主運作。</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-title">AIESEC 國際經濟商管學生會</div>
+                <div class="exp-role">Outgoing Global Volunteers 儲備幹部</div>
+                
+                <div class="exp-subtitle">對外招生與品牌推廣</div>
+                <ul class="exp-list">
+                    <li>於校園推廣海外志工計畫，培養說服力與簡報表達能力。</li>
+                    <li>協助規劃宣傳策略與招生活動，接觸不同系所學生族群。</li>
+                </ul>
+
+                <div class="exp-subtitle">跨文化溝通與協作</div>
+                <ul class="exp-list">
+                    <li>與海外分會進行專案合作與溝通，學習不同文化下的專業互動模式。</li>
+                    <li>處理志工申請流程與學生諮詢，培養服務與問題解決能力。</li>
+                </ul>
+
+                <div class="exp-subtitle">國際視野培養</div>
+                <ul class="exp-list" style="margin-bottom: 0;">
+                    <li>從國際組織運作中，理解多元文化與專案合作模式。</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-title">中興大學 棒球校隊</div>
+                <div class="exp-role">球隊經理</div>
+                
+                <div class="exp-subtitle">行政統籌與賽務支援</div>
+                <ul class="exp-list">
+                    <li>管理球隊日常行政、賽程安排與報名作業。</li>
+                    <li>負責比賽紀錄與後勤協調，確保賽事流程順暢。</li>
+                </ul>
+
+                <div class="exp-subtitle">數據整理與細節管理</div>
+                <ul class="exp-list">
+                    <li>精準處理比賽數據與文件紀錄，在高壓環境下維持資料完整與正確性。</li>
+                    <li>培養極高的細心度與責任感。</li>
+                </ul>
+
+                <div class="exp-subtitle">團隊溝通能力</div>
+                <ul class="exp-list" style="margin-bottom: 0;">
+                    <li>作為教練、球員與行政之間的橋樑，提升整體效率。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>商業競賽 Business Competition</h2>
+            <div class="exp-item">
+                <div class="exp-title">第14屆 TBSA 全國大專創新企劃競賽</div>
+                <div class="exp-role">企劃統籌 & 分析負責人 | 2024</div>
+                <ul class="exp-list" style="margin-top: 10px;">
+                    <li><strong>規劃產品定位：</strong>針對「飲品推薦引擎」進行目標族群設定與市場區隔。</li>
+                    <li><strong>市場與競品分析：</strong>進行使用者需求調研，並比較現有競品，評估商業可行性。</li>
+                    <li><strong>企劃統籌與設計：</strong>負責整體企劃架構邏輯，並設計高品質的提案簡報。</li>
+                    <li><strong>團隊協作與領導：</strong>協調成員分工，進行時程控管，確保專案高品質產出。</li>
+                    <li><span style="color: var(--microsoft-blue); font-weight: bold;">(註：競賽結果預計 12/2 公布)</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>作品集 Portfolio</h2>
+            <p style="margin-bottom: 20px; color: #666;">
+                <strong>影像紀錄 × 內容創作作品集</strong>
+            </p>
+            
+            <a href="https://youtube.com/playlist?list=PLZLNb6t9fTMlTCSIm0kXELlB9ZM2z8acd&si=RIPfb4dPmiG35SRy" target="_blank" class="playlist-card">
+                <div class="playlist-icon">▶️</div>
+                <div class="playlist-info">
+                    <h3>陳宥安的影音作品集 (YouTube)</h3>
+                    <p>收錄內容：生活紀錄 VLOG 、棒球校隊宣傳片 </p>
+                </div>
+                <div class="btn-view">點擊觀看全部影片</div>
+            </a>
+        </section>
+
+        <div class="contact-section">
+            <a href="mailto:eross940113@gmail.com" class="btn-contact">聯絡我 / 發送 Email</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
