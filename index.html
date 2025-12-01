@@ -30,6 +30,20 @@
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
         }
 
+        /* 大頭貼專用樣式 */
+        .profile-img-container {
+            margin-bottom: 25px; /* 照片跟名字的距離 */
+        }
+
+        .profile-img {
+            width: 160px;       /* 設定照片大小 */
+            height: 160px;
+            border-radius: 50%; /* 這行會把照片變成漂亮的圓形 */
+            object-fit: cover;  /* 確保照片比例正確 */
+            border: 5px solid white; /* 加一個白框，更有質感 */
+            box-shadow: 0 5px 15px rgba(0, 164, 239, 0.3); /* 加一點微軟藍的陰影光暈 */
+        }
+        
         header h1 {
             margin: 0;
             font-size: 2.2rem;
@@ -177,7 +191,11 @@
 </head>
 <body>
 
-    <header>
+   <header>
+        <div class="profile-img-container">
+            <img src="profile.jpg" alt="陳宥安" class="profile-img">
+        </div>
+        
         <h1>陳宥安 You-An Chen</h1>
         <p>中興大學 應用經濟學系</p>
         <div class="tagline">將想法轉化為成果的企劃執行者</div>
@@ -329,4 +347,5 @@
 
 </body>
 </html>
+
 
